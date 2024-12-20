@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathaniel B. Virtudez Portfolio</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Verdana, sans-serif'; /* Updated font style */
+      background-color: #fffaf0; /* Soft cream background */
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #f4a261; /* Warm orange */
+      color: #fff;
+      padding: 20px 10px;
+      border-bottom: 5px solid #e76f51;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Add sunflower only to the logo */
+    header h1::after {
+      content: "🌻";
+      font-size: 1.5em;
+      margin-left: 10px;
+    }
+
+    /* Navigation button styles */
+    nav {
+      margin-top: 15px;
+    }
+
+    nav button {
+      text-decoration: none;
+      color: #fff;
+      background-color: #2a9d8f; /* Teal color for buttons */
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px #264653; /* Slight shadow for depth */
+    }
+
+    nav button:hover {
+      background-color: #264653; /* Dark teal when hovered */
+      transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+    nav button:active {
+      background-color: #e76f51; /* Coral when pressed */
+      box-shadow: 0 2px #2a9d8f; /* Reduce shadow when pressed */
+      transform: scale(0.95); /* Button shrinks slightly */
+    }
+
+    /* Section styles */
+    .content {
+      display: none; /* Initially hide the sections */
+      padding: 20px;
+      line-height: 1.8;
+    }
+
+    .active {
+      display: block; /* Display only the active section */
+      animation: fadeIn 0.5s ease; /* Add fade-in animation */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .section {
+      margin: 20px auto;
+      max-width: 800px; /* Limit width for better readability */
+      background: #ffffff; /* White background for sections */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      padding: 20px;
+    }
+
+    .section h2 {
+      color: #e76f51; /* Coral heading color */
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      text-align: left; /* Left-align text for better readability */
+      margin: 10px 0;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    /* Back button styles */
+    .back-button {
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background-color: #2a9d8f;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #264653;
+      transform: scale(1.05);
+    }
+
+    .back-button:active {
+      background-color: #e76f51;
+      transform: scale(0.95);
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #264653; /* Dark teal */
+      color: #fff;
+      padding: 10px;
+      font-size: 0.9em;
+    }
+
+    /* Add sunflower and cat designs in corners */
+    body::before, body::after {
+      content: "🐱🌻";
+      font-size: 2em;
+      position: fixed;
+    }
+
+    body::before {
+      top: 10px;
+      left: 10px;
+    }
+
+    body::after {
+      bottom: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nathaniel B. Virtudez Portfolio</h1>
+    <nav>
+      <button onclick="showSection('about-me')">About Me</button>
+      <button onclick="showSection('interests')">Interests</button>
+      <button onclick="showSection('hobbies')">Hobbies</button>
+    </nav>
+  </header>
+  <main>
+    <section id="about-me" class="content section">
+      <h2>About Me</h2>
+      <p>Hello! My name is Nathaniel Bituin Virtudez, born on June 30, 2005, and raised in Brgy. Laguan, Rizal, Laguna. I’m a 19-year-old BS Information Technology student at LSPU San Pablo Laguna. I have a passion for creativity and storytelling. I’ve always been inspired by the beauty of my surroundings and the vibrant energy of life. My love for arts, music, and animation has shaped me into someone who sees the world through a colorful lens, constantly seeking new ways to express myself and connect with others.</p>
+      <button class="back-button" onclick="goBack()">Back to Home</button>
+    </section>
+    <section id="interests" class="content section">
+      <h2>Interests</h2>
+      <p>From an early age, I discovered a deep love for drawing. What started as simple sketches grew into a lifelong passion for creating art that tells stories and evokes emotions. Whether it’s a detailed character design or a quick sketch, animation and animated films have played a huge role in my creative journey. They fuel my inspiration, showcasing the endless possibilities of storytelling through visual art.</p>
+      <button class="back-button" onclick="goBack()">Back to Home</button>
+    </section>
+    <section id="hobbies" class="content section">
+      <h2>Hobbies</h2>
+      <p>When I’m not drawing, you’ll often find me working out or listening to music. Physical fitness keeps my body energized, while music feeds my soul and fuels my creativity. My playlists are diverse, reflecting my eclectic taste and ever-changing moods. From calm, introspective melodies to upbeat anthems, music has a way of helping me stay grounded and inspired.</p>
+      <p>I also enjoy unwinding by watching animated films and shows. These visual masterpieces not only entertain me but also push me to dream bigger as an aspiring artist. Spending time with my girlfriend is another cherished part of my life. Whether we’re exploring new places, sharing stories, or simply enjoying each other’s company, these moments of connection remind me of the importance of love and companionship.</p>
+      <button class="back-button" onclick="goBack()">Back to Home</button>
+    </section>
+  </main>
+  <footer>
+    <small>ITEC101 Final Requirement - Ms. Kristine Arida</small>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.content');
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.classList.add('active');
+    }
+
+    function goBack() {
+      // Hide all sections
+      const sections = document.querySelectorAll('.content');
+      sections.forEach(section => section.classList.remove('active'));
+    }
+  </script>
+</body>
+</html>
